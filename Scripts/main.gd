@@ -91,8 +91,17 @@ func _on_repulsion_range_value_changed(value):
 func _on_repulsion_strength_value_changed(value):
 	repulsion_strength = value
 
+@onready var pause_button = $user_interface/VBoxContainer/pause_button
 func _on_pause_button_pressed():
 	get_tree().paused = !get_tree().paused
+	pause_button.release_focus()
+
+@onready var clear_button = $user_interface/VBoxContainer/clear_button
+func _on_clear_button_pressed():
+	for atom in atoms:
+		atom.queue_free()
+	atoms.clear()
+	clear_button.release_focus()
 
 # handle labels
 @onready var attraction_range_label = $user_interface/VBoxContainer/VBoxContainer/attraction_range_label
