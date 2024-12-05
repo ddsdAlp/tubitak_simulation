@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://hc267ptt37mr"]
+
+[ext_resource type="Script" path="res://atom.gd" id="1_v3ara"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m56b5"]
+
+[node name="Atom" type="RigidBody2D"]
+script = ExtResource("1_v3ara")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m56b5")
+
+[node name="atom_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="force_vector" type="Line2D" parent="."]
+width = 15.0
