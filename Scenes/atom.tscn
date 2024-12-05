@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://hc267ptt37mr"]
 
-[ext_resource type="Script" path="res://atom.gd" id="1_v3ara"]
+[ext_resource type="Script" path="res://Scripts/atom.gd" id="1_1pps6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m56b5"]
 
 [node name="Atom" type="RigidBody2D"]
-script = ExtResource("1_v3ara")
+script = ExtResource("1_1pps6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m56b5")
